@@ -1,6 +1,10 @@
-# Written by Sara Varela and adapted by Santiago J. E. Velazco
-
-env_filtering <- function(coord, variables, nbins, do.plot=TRUE){
+#' Function to perform environmental filtering of species occurrence records
+#'
+#' @param coord data.frame. A data.frame with longitude and latitude in the first and second columns.
+#' @param variables data.frame. A data.frame with environmental conditions. It is possible use two or three variables.  
+#' @param nbins numeric. A number of classes used to split each environmental condition.
+#' @param plot logical. Plot filtering procedure.
+env_filtering <- function(coord, variables, nbins, plot=TRUE){
   library(maps)
   
   filters <- as.list(variables)
@@ -78,7 +82,7 @@ env_filtering <- function(coord, variables, nbins, do.plot=TRUE){
   coord_filter<- final_points[,1:2]
   names(coord_filter)<- c("x", "y")
   
-  if (do.plot == TRUE) {
+  if (plot == TRUE) {
     par (mfrow = c(1, 2), mar = c(4, 4, 0, 0.5))
     plot (
       filters[[1]],
