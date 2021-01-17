@@ -1,2 +1,2 @@
 # Modeling potential invasion of Ligustrum lucidum
-Codes used for Ligustrum lucidum occurrence data cleaning, environmental data processing, and spatial distribution models. Such result were published in XXXXX.
+Codes used for Ligustrum lucidum occurrence data cleaning, environmental data processing, and spatial distribution models. Such results were be published in ....
